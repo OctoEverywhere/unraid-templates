@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>OctoEverywhere</Name>
+  <Repository>octoeverywhere/octoeverywhere</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/191694-official-octoeverywhere-docker-container-support/</Support>
+  <Project>https://octoeverywhere.com</Project>
+  <Overview>Cloud empower your OctoPrint, Klipper, Bambu Lab, Elegoo, Prusa, Creality 3D printers with free, private, and unlimited remote access, AI print failure detection, and more! Developed for the maker community, powered by the maker community.&#xD;
+&#xD;
+To use this plugin:&#xD;
+1) Get the required information for your 3D printer.&#xD;
+2) Install the Docker plugin in UnRaid using the information.&#xD;
+3) View the Docker container logs to get your account linking URL.&#xD;
+4) Make a new Docker container plugin for all your 3D printers!&#xD;
+&#xD;
+To follow this link for a guide on how to get the required Docker variables for your 3D printer:&#xD;
+https://octoeverywhere.com/r/docker&#xD;
+&#xD;
+Features:&#xD;
+&#x1F680; Free remote access to your full OctoPrint, Mainsail, Fluidd, and Bambu Lab web portals from anywhere.&#xD;
+&#x1F916; Free &amp;amp; unlimited AI print failure detection will automatically stop failed prints, saving you time and money.&#xD;
+&#x1F4F7; Full resolution and full frame-rate webcam streaming.&#xD;
+&#x1F4F1; Empower your favorite OctoPrint &amp;amp; Klipper iOS and Android apps with remote access.&#xD;
+&#x1F4FA; Live stream your 3D prints to your friends or the world with Live Links.&#xD;
+&#x1F514; Instant printer notifications sent to SMS, Email, Discord, Telegram, Slack, and more.&#xD;
+&#x1F517; Share with others secure access to your OctoPrint, Fluidd, or Mainsail portal.&#xD;
+&#x1F4AA; Full OctoPrint plugin functionality.&#xD;
+&#x1F939; Full multicam support.&#xD;
+... and much, much more!&#xD;
+&#xD;
+OctoEverywhere is the best 3D printing cloud out there! Learn more @ https://octoeverywhere.com</Overview>
+  <Category>Cloud: HomeAutomation: Productivity: Tools: Network:Web Network:Proxy Network:Management Status:Stable</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://octoeverywhere.com/img/logo.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1751580218</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Type" Target="COMPANION_MODE" Default="bambu" Mode="" Description="The plugin type you're setting up. MUST BE: bambu, elegoo, or klipper" Type="Variable" Display="always" Required="true" Mask="false">elegoo</Config>
+  <Config Name="Printer IP Address" Target="PRINTER_IP" Default="" Mode="" Description="(required for all types) The IP address of your 3D printer." Type="Variable" Display="always" Required="true" Mask="false">10.0.0.25</Config>
+  <Config Name="Bambu Lab Access Code" Target="ACCESS_CODE" Default="" Mode="" Description="Only required for Bambu Lab plugins (see readme)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Bambu Lab Serial Number" Target="SERIAL_NUMBER" Default="" Mode="" Description="Only required for Bambu Lab printers. (see readme)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Data Path" Target="/data" Default="" Mode="rw" Description="A unique folder for each plugin to store data." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/octoeverywhere</Config>
+  <Config Name="Moonraker API Key" Target="MOONRAKER_API_KEY" Default="" Mode="" Description="Optional For Klipper Plugins Types That Have Auth Enabled" Type="Variable" Display="advanced" Required="false" Mask="true"/>
+  <Config Name="Klipper Frontend Port" Target="WEBSERVER_PORT" Default="" Mode="" Description="Optional for Klipper-type plugins." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Moonraker Port" Target="MOONRAKER_PORT" Default="7125" Mode="" Description="Optional for Klipper Plugins" Type="Variable" Display="advanced" Required="false" Mask="false">7125</Config>
+  <TailscaleStateDir/>
+</Container>
